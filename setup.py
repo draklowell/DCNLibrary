@@ -18,7 +18,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
         'Development Status :: 4 - Beta',
         'Natural Language :: English',
-        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+        'License :: OSI Approved :: Apache License 2.0',
     ],
     install_requires = [
         'pycryptodome>=3.9.9',
