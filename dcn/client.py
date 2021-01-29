@@ -11,8 +11,9 @@ class InvalidPacketSize(Exception):
     pass
 
 class Client:
-    def __init__(self, friendly_hosts: list = []):
+    def __init__(self, friendly_hosts: list = [], limit_queue = -1):
         self.hosts = list(friendly_hosts)
+        self.limit_queue = limit_queue
         self.handler = Handler
         self.handlers = []
         self.offhandlers = []
@@ -68,6 +69,8 @@ class Client:
                     del self.hashlist[h]
                 else:
                     break
+            while len(self.queue) > self.limit_queue and self.limit_queue >= 0:
+                del self.queue[0]
             if (not HOSTLIST_ADDRESS is None) and (time.time() - last_check > 5):
                 last_check = time.time()
                 try:

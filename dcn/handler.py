@@ -26,6 +26,7 @@ class Handler(threading.Thread):
         
     def tryConnect(self):
         self.socket = socket.socket()
+        self.socket.settimeout(2)
         self.socket.connect(self.address)
         self.socket.settimeout(0.1)
         self.socket = ssl.wrap_socket(
@@ -71,7 +72,7 @@ class Handler(threading.Thread):
         while self.running:
             try:
                 packet_size = self.socket.recv(2)
-            except (socket.timeout, ssl.SSLError):
+            except (socket.timeout, ssl.SSLError, OSError):
                 continue
             except OSError:
                 self.onDisconnected()

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="dcn",
-    version="2.0.0",
+    version="2.0.0.4.1.1",
     author="Drak Lowell",
     description="Decentralized computer network",
     long_description=long_description,
@@ -22,7 +22,7 @@ setuptools.setup(
     ],
     install_requires = [
         'pycryptodome>=3.9.9',
-        'ansicolors>=1.1.8'
+        'requests>=2.22.0'
     ],
     python_requires='>=3.8',
 )

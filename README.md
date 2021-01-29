@@ -20,7 +20,7 @@ Download client and in downloaded folder run
 python setup.py install
 ```
 ### Dependencies
-1. ansicolors ( `1.1.8` )
+1. requests ( `2.22.0` )
 2. pycryptodome ( `3.9.9` )
 ## Info
 #### Privacy
