@@ -74,3 +74,9 @@ Output:
 Content of packet: Hello world!
 Packet hash ( base64 encoded ): oZ/dl88Jbb2CiCCQadpxeQSU/HVpHN3k6A+jAIT8G4k=
 ```
+
+#### Close client
+You need close client in end of work
+```python
+client.close()
+```
