@@ -71,7 +71,7 @@ class Handler(threading.Thread):
         while self.running:
             try:
                 packet_size = self.socket.recv(2)
-            except (socket.timeout, ssl.SSLError):
+            except (socket.timeout, ssl.SSLError, OSError):
                 continue
             except OSError:
                 self.onDisconnected()

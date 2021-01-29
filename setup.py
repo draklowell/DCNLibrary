@@ -22,7 +22,8 @@ setuptools.setup(
     ],
     install_requires = [
         'pycryptodome>=3.9.9',
-        'ansicolors>=1.1.8'
+        'ansicolors>=1.1.8',
+        'requests>=2.22.0'
     ],
     python_requires='>=3.8',
 )
