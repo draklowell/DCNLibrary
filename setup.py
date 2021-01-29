@@ -5,20 +5,20 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="dcn",
-    version="1.0.0",
+    version="2.0.0",
     author="Drak Lowell",
     description="Decentralized computer network",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/draklowell/DCNLibrary",
     packages=["dcn"],
+    license='Apache License 2.0',
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         'Development Status :: 4 - Beta',
         'Natural Language :: English',
-        'License :: OSI Approved :: Apache License 2.0',
     ],
     install_requires = [
         'pycryptodome>=3.9.9',
