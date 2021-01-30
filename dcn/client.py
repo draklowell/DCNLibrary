@@ -56,6 +56,7 @@ class Client:
         packed = packet.getPacked()
         if len(packed) > 2**16:
             raise InvalidPacketSize("Packet size is larger then 65536")
+        self.hashlist[packet.getHash()] = time.time()
         return (self.broadcast(int.to_bytes(len(packed), 2, "big") + packed), packet.getHash())
 
     def _checkforever(self):

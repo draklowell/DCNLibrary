@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="dcn",
-    version="2.0.0.4.1.1",
+    version="2.0.0.4.1.2",
     author="Drak Lowell",
     description="Decentralized computer network",
     long_description=long_description,
